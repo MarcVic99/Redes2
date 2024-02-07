@@ -13,7 +13,8 @@ int main()
 {
 
     std::cout << "Select"<<std::endl<< "Client -> C " << std::endl << "Server -> S" << std::endl;
-
+    while (true)
+    {
     char mode = ' ';
 
     do
@@ -42,8 +43,7 @@ int main()
         break;
     }
 
-    while (true)
-    {
+
 
     }
 
@@ -58,10 +58,14 @@ void RunClient()
 
     if (status != sf::Socket::Done) {
         std::cout << std::endl << "Error on connect to server";
-
+        return;
     }
+
     while (true)
     {
+
+
+
         std::cout << std::endl << "Next message: ";
         std::string message;
         std::getline(std::cin, message);
