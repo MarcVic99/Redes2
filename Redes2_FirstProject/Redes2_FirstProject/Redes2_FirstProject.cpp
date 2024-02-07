@@ -3,6 +3,7 @@
 #include <conio.h>
 #include <iostream>
 #include <SFML/Network.hpp>
+#include "ConsoleControl.h"
 
 unsigned short port = 3000;
 
@@ -19,10 +20,9 @@ int main()
 
     do
     {
-        if (_kbhit())
-        {
-            mode = _getch();
-        }
+
+            mode = ConsoleControl::WaitForReadNextChar();
+        
     } while (mode != 'C' && mode != 'c' && mode != 'S' && mode != 's');
 
     switch (mode)
@@ -53,37 +53,37 @@ void RunClient()
 {
     std::cout << "Client";
 
-    sf::TcpSocket socket;
-    sf::Socket::Status status = socket.connect("10.40.2.49", port);
+    //sf::TcpSocket socket;
+    //sf::Socket::Status status = socket.connect("10.40.2.49", port);
 
-    if (status != sf::Socket::Done) {
-        std::cout << std::endl << "Error on connect to server";
-        return;
-    }
+    //if (status != sf::Socket::Done) {
+    //    std::cout << std::endl << "Error on connect to server";
+    //    return;
+    //}
 
-    while (true)
-    {
+    //while (true)
+    //{
 
 
 
-        std::cout << std::endl << "Next message: ";
-        std::string message;
-        std::getline(std::cin, message);
-        char data[100];
-        int stringSize = message.length();
-        for (int i = 0; i < stringSize; i++)
-        {
-            char c = message[i];
-            data[i] = c;
+    //    std::cout << std::endl << "Next message: ";
+    //    std::string message;
+    //    std::getline(std::cin, message);
+    //    char data[100];
+    //    int stringSize = message.length();
+    //    for (int i = 0; i < stringSize; i++)
+    //    {
+    //        char c = message[i];
+    //        data[i] = c;
 
-        }
+    //    }
 
-        if (socket.send(data, 100) != sf::Socket::Done)
-        {
-            std::cout << std::endl << "Error on sending message";
+    //    if (socket.send(data, 100) != sf::Socket::Done)
+    //    {
+    //        std::cout << std::endl << "Error on sending message";
 
-        }
-    }
+    //    }
+    //}
 
 
 }
@@ -92,7 +92,7 @@ void RunServer()
 {
     std::cout << "Server";
 
-    sf::TcpListener listener;
+  /*  sf::TcpListener listener;
     
     if (listener.listen(3000) != sf::Socket::Done)
     {
@@ -141,6 +141,6 @@ void RunServer()
         }
 
 
-    }
+    }*/
 
 }
