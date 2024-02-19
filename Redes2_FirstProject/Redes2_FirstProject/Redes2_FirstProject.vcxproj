@@ -141,11 +141,21 @@
   <ItemGroup>
     <ClCompile Include="Chat.cpp" />
     <ClCompile Include="ConsoleControl.cpp" />
+    <ClCompile Include="Packet.cpp" />
     <ClCompile Include="Redes2_FirstProject.cpp" />
+    <ClCompile Include="SocketSelect.cpp" />
+    <ClCompile Include="SocketsManager.cpp" />
+    <ClCompile Include="TcpListener.cpp" />
+    <ClCompile Include="TcpSocket.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Chat.h" />
     <ClInclude Include="ConsoleControl.h" />
+    <ClInclude Include="Packet.h" />
+    <ClInclude Include="SocketSelect.h" />
+    <ClInclude Include="SocketsManager.h" />
+    <ClInclude Include="TcpListener.h" />
+    <ClInclude Include="TcpSocket.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

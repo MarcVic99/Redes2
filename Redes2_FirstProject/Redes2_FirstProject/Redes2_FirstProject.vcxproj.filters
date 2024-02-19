@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="ConectionAbstraction">
+      <UniqueIdentifier>{06fed2fc-1c47-4711-99d8-5cba9ad662c9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Redes2_FirstProject.cpp">
@@ -24,12 +27,42 @@
     <ClCompile Include="Chat.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="TcpSocket.cpp">
+      <Filter>ConectionAbstraction</Filter>
+    </ClCompile>
+    <ClCompile Include="SocketsManager.cpp">
+      <Filter>ConectionAbstraction</Filter>
+    </ClCompile>
+    <ClCompile Include="Packet.cpp">
+      <Filter>ConectionAbstraction</Filter>
+    </ClCompile>
+    <ClCompile Include="TcpListener.cpp">
+      <Filter>ConectionAbstraction</Filter>
+    </ClCompile>
+    <ClCompile Include="SocketSelect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ConsoleControl.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Chat.h">
+      <Filter>ConectionAbstraction</Filter>
+    </ClInclude>
+    <ClInclude Include="ConsoleControl.h">
+      <Filter>ConectionAbstraction</Filter>
+    </ClInclude>
+    <ClInclude Include="Packet.h">
+      <Filter>ConectionAbstraction</Filter>
+    </ClInclude>
+    <ClInclude Include="SocketsManager.h">
+      <Filter>ConectionAbstraction</Filter>
+    </ClInclude>
+    <ClInclude Include="TcpSocket.h">
+      <Filter>ConectionAbstraction</Filter>
+    </ClInclude>
+    <ClInclude Include="TcpListener.h">
+      <Filter>ConectionAbstraction</Filter>
+    </ClInclude>
+    <ClInclude Include="SocketSelect.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
